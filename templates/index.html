@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-	<html >
-	<!--From https://codepen.io/frytyler/pen/EGdtg-->
-	<head>
-	  <meta charset="UTF-8">
-	  <title>Mobil Innova 2018</title>
-	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	  
-	</head>
-	<center>
-		<br>
-		<br>
-		<br>
-	<body bgcolor="#a3c1ad">
-		 <div class="background"></div>
-			<h2 style="border: 2px solid black;">
-				<table border="0" style="center">
-	 <div class="login">
-		<h1>Prediksi Mobil Toyota Innova 2018</h1>
-	     <!-- Main Input For Receiving Query to our ML -->
-	    <form action="{{ url_for('predict')}}"method="post">
-	    	<p>Masukkan kilometer mobil (KM)<input type="text" name="X" placeholder="KM" required="required" />
-	
-	    	        <button type="submit" class="btn btn-primary btn-block btn-large">Cek Harga Mobil</button></p>
-	    </form>
-	   <br>
-	   <br>
-	   {{ prediction_text }}
-	</center>
-	 </div>
-	
+<!doctype html>
+<html>
+<head>
+<title> Mobil </title>
+</head>
+   <body bgcolor="#a3c1ad">
+   <div class="background"></div>
+  <br><p align="center"><font face=Georgia color=black size="15">Prediksi Harga Mobil Toyota Innova 2018
+  </font><br></br>
+    <div class="div2">
+      <form action = "{{ url_for('predict')}}" method = "POST">
 
-	</body>
-	</html>
+         <p align="center"> Masukkan KM mobil <td><input type = "text" name = "Biayaiklan" /> <input type = "submit" value = OK /> </p></td>
+      </form>
+    
+   <p align="center"><font face=Georgia color=black size="3"><td>Prediksi harga mobil: </td>
+   <br>Rp {{ prediction_text }}</br></p>
+   </div>
+   </body>
+<style>
+   .background {
+            background-color: green;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    .div2 {
+     margin: auto;
+     background-color:#e4ede0;
+     width: 400px;
+     height: 100px;  
+     padding: 50px;
+     border: 4px solid black;
+   }
+   </style>
+</html>
