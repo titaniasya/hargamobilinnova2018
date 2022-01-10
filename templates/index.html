@@ -10,11 +10,11 @@
     <div class="div2">
       <form action = "{{ url_for('predict')}}" method = "POST">
 
-         <p align="center"> Masukkan KM mobil <td><input type = "text" name = "Biayaiklan" /> <input type = "submit" value = OK /> </p></td>
+         <p align="center"> Masukkan jarak mobil (KM) <td><input type = "text" name = "Biayaiklan" /> <input type = "submit" value = OK /> </p></td>
       </form>
     
-   <p align="center"><font face=Georgia color=black size="3"><td>Prediksi harga mobil: </td>
-   <br>Rp {{ prediction_text }}</br></p>
+   <p align="center"><font face=Georgia color=black size="3">
+   <br> {{ prediction_text }}</br></p>
    </div>
    </body>
 <style>
